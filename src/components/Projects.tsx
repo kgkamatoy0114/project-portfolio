@@ -12,11 +12,11 @@ const projects: Project[] = [
 		stack: ["React", "TypeScript", "Node.js", "API"],
 	},
 	{
-		title: "Simple CRUD",
+		title: "Simple CRUD Form",
 		role: "Frontend",
 		status: "Live",
 		description:
-			"Modern developer portfolio with responsive layout, reusable components, and smooth UI interactions.",
+			"Simple CRUD form with create, read, update, and delete functionality.",
 		stack: ["Vue", "Vuetify", "API"],
 	},
 ];
