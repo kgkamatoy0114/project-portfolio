@@ -6,7 +6,7 @@ export default function Home() {
 		>
 			<h1 className="text-5xl font-bold mb-4">About me</h1>
 			<p className="text-lg text-black">
-				I’m a Frontend Developer focused on building responsive, user-friendly,
+				I’m a Software Engineer focused on building responsive, user-friendly,
 				and modern web applications using React, TypeScript, and Tailwind CSS. I
 				enjoy turning ideas into clean, functional interfaces and creating
 				smooth user experiences that feel intuitive and polished. I’ve worked on

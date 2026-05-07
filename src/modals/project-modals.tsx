@@ -22,7 +22,9 @@ export default function ProjectModal({ project, onClose }: Props) {
 			>
 				<div className="flex justify-between items-start">
 					<div>
-						<h2 className="text-2xl text-black">{project.title}</h2>
+						<h3 className="text-lg font-semibold text-black">
+							{project.title}
+						</h3>
 						<p className="text-sm text-gray-500">
 							Role: {project.role} • {project.status}
 						</p>
