@@ -10,9 +10,10 @@ export default function Navbar() {
 
 				<div className="hidden md:flex gap-6">
 					<a href="#home">Home</a>
+					<a href="#about">About</a>
 					<a href="#projects">Projects</a>
-					<a href="#contact">Contact</a>
 					<a href="#skills">Skills</a>
+					<a href="#contact">Contact</a>
 				</div>
 
 				<button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -23,9 +24,10 @@ export default function Navbar() {
 			{open && (
 				<div className="md:hidden flex flex-col bg-black p-4 gap-4">
 					<a href="#home">Home</a>
+					<a href="#about">About</a>
 					<a href="#projects">Projects</a>
-					<a href="#contact">Contact</a>
 					<a href="#skills">Skills</a>
+					<a href="#contact">Contact</a>
 				</div>
 			)}
 		</nav>

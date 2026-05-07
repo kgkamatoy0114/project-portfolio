@@ -22,7 +22,7 @@ const skills = [
 			{ name: "Express", level: 70 },
 			{ name: "GraphQl", level: 70 },
 			{ name: "REST API", level: 85 },
-			{ name: "PHP Laravel, CodeIgniter", level: 60 },
+			{ name: "PHP Laravel", level: 60 },
 			{ name: "ASP.NET MVC, CodeIgniter", level: 60 },
 			{ name: "SQL", level: 90 },
 		],

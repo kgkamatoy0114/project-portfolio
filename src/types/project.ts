@@ -4,4 +4,5 @@ export type Project = {
 	status: string;
 	description: string;
 	stack: string[];
+	images: string[];
 };

@@ -1,4 +1,6 @@
 import { type Project } from "../types/project";
+import { useState } from "react";
+import { ModalGallery } from "../modals/modal-gallery";
 
 type Props = {
 	project: Project | null;
@@ -6,6 +8,7 @@ type Props = {
 };
 
 export default function ProjectModal({ project, onClose }: Props) {
+	const [open, setOpen] = useState(false);
 	if (!project) return null;
 
 	return (
@@ -17,10 +20,9 @@ export default function ProjectModal({ project, onClose }: Props) {
 				className="bg-white w-full max-w-2xl rounded-2xl p-6 shadow-xl"
 				onClick={(e) => e.stopPropagation()}
 			>
-				{/* Header */}
 				<div className="flex justify-between items-start">
 					<div>
-						<h2 className="text-2xl font-semibold">{project.title}</h2>
+						<h2 className="text-2xl text-black">{project.title}</h2>
 						<p className="text-sm text-gray-500">
 							Role: {project.role} • {project.status}
 						</p>
@@ -31,12 +33,10 @@ export default function ProjectModal({ project, onClose }: Props) {
 					</button>
 				</div>
 
-				{/* Description */}
 				<p className="text-gray-700 mt-4 leading-relaxed">
 					{project.description}
 				</p>
 
-				{/* Stack */}
 				<div className="flex flex-wrap gap-2 mt-5">
 					{project.stack.map((item, i) => (
 						<span
@@ -47,17 +47,23 @@ export default function ProjectModal({ project, onClose }: Props) {
 						</span>
 					))}
 				</div>
-
 				{/* Footer actions */}
 				<div className="flex gap-3 mt-6">
-					<button className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
-						Live Demo
+					<button
+						className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800"
+						onClick={() => setOpen(true)}
+					>
+						Photo Gallery
 					</button>
 					<button className="px-4 py-2 border rounded-lg hover:bg-gray-50">
 						GitHub
 					</button>
 				</div>
 			</div>
+			{/* MODAL */}
+			{open && (
+				<ModalGallery images={project.images} onClose={() => setOpen(false)} />
+			)}
 		</div>
 	);
 }
